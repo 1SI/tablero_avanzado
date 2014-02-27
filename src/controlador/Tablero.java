@@ -103,7 +103,7 @@ public class Tablero extends JPanel {
 
     //Devuelve un ImageIcon con la ruta del archivo de imagen
     private ImageIcon cargarFondo(String ruta) throws MalformedURLException {
-        java.net.URL localizacion = new File(ruta).toURL();
+        java.net.URL localizacion = new File(ruta).toURI().toURL();
         if (localizacion != null) {
             return new ImageIcon(localizacion);
         } else {
